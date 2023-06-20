@@ -2,36 +2,31 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('thumbnails', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      fullName: {
+      thumbnailName: {
         allowNull: false,
-        length: 50,
         type: Sequelize.STRING
       },
-      email: {
-        allowNull: false,
-        length: 50,
+      thumbnailPreview: {
         type: Sequelize.STRING
       },
-      phone: {
+      thumbnailUrl1: {
         allowNull: false,
-        length: 30,
         type: Sequelize.STRING
       },
-      password: {
+      thumbnailUrl2: {
         allowNull: false,
-        length: 100,
         type: Sequelize.STRING
       },
-      accountType: {
+      thumbnailUrl3: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -43,7 +38,8 @@ module.exports = {
       }
     });
   },
+ 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('thumbnails');
   }
 };

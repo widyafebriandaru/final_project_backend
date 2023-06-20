@@ -12,10 +12,10 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('menuProducts', [
+    await queryInterface.bulkInsert('detailProducts', [
       {
        productName: 'Daru',
-       thumbnailPreview: "febriandaru23@gmail.com",
+       thumbnailPreview: "",
        discount: "081532551051",
        initialPrice: "727272",
        finalPrice:"",
@@ -23,17 +23,7 @@ module.exports = {
     }
      
   ], {});
-    await queryInterface.addConstraint('menuProducts', [
-      {
-        fields: ['productName'],
-        type: 'foreign key',
-        name:'FK_menuProducts_thumbnail',
-        references: {
-          table: 'thumbnail',
-          field: 'id'
-        }
-      }
-    ]);
+    
   },
 
   async down (queryInterface, Sequelize) {
@@ -43,5 +33,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+    await queryInterface.bulkDelete('menuProducts',null,{});
   }
 };

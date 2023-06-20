@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class orders extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,36 +13,39 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  User.init({
+  orders.init({
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    fullName: {
-      allowNull: false,
-      length: 50,
-      type: DataTypes.STRING
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users', 
+        key: 'id'
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE'
     },
-    email: {
-      allowNull: false,
-      length: 50,
-      type: DataTypes.STRING
+    detail_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'detailProducts', 
+        key: 'id'
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE'
     },
-    phone: {
-      allowNull: false,
-      length: 30,
-      type: DataTypes.STRING
-    },
-    password: {
-      allowNull: false,
-      length: 100,
-      type: DataTypes.STRING
-    },
-    accountType: {
-      allowNull: false,
-      type: DataTypes.DATE
+    thumbnail_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'thumbnails', 
+        key: 'id'
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE'
     },
     createdAt: {
       allowNull: false,
@@ -54,8 +57,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'User',
-    timestamps: true,
+    modelName: 'orders',
   });
-  return User;
+  return orders;
 };
