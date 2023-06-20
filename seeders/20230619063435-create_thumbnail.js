@@ -36,18 +36,18 @@ module.exports = {
     },
     {
       thumbnailName: "Flannel ANGELOS NAVY RED",
-      thumbnailPreview: "",
-      thumbnailUrl1: "",
-      thumbnailUrl2: "",
-      thumbnailUrl3: ""
+      thumbnailPreview: "https://www.screamous.com/cdn/shop/products/id-11134207-7qul0-lfmklqyz0hjida_590x.jpg?v=1681714282",
+      thumbnailUrl1: "https://www.screamous.com/cdn/shop/products/id-11134207-7qul6-lfmklqyyw9u646_150x.jpg?v=1681714272",
+      thumbnailUrl2: "https://www.screamous.com/cdn/shop/products/id-11134207-7qul5-lfmklqyyz2z297_150x.jpg?v=1681714279",
+      thumbnailUrl3: "https://www.screamous.com/cdn/shop/products/id-11134207-7qul3-lfmklqyyxoem9f_360x.jpg?v=1681714277"
     },
     {
-      thumbnailName: "",
-      thumbnailPreview: "",
-      thumbnailUrl1: "",
-      thumbnailUrl2: "",
-      thumbnailUrl3: ""
-    },
+      thumbnailName: "T-Shirt Longsleeves Rugby MARK BLACK WHITE",
+      thumbnailPreview: "https://www.screamous.com/cdn/shop/products/id-11134207-7quky-lfry56ueejkj0c_0eaf70d7-d0ed-412c-80af-93ca118af8e9_360x.jpg?v=1681901366",
+      thumbnailUrl1: "https://www.screamous.com/cdn/shop/products/id-11134207-7qukx-lfrs48szq2gtcf_150x.jpg?v=1681901355",
+      thumbnailUrl2: "https://www.screamous.com/cdn/shop/products/id-11134207-7qul8-lfrs48szua657e_150x.jpg?v=1681901360",
+      thumbnailUrl3: "https://www.screamous.com/cdn/shop/products/id-11134207-7qukz-lfrs48szsvlpe0_150x.jpg?v=1681901357"
+    }
     // {
     //   thumbnailName: "",
     //   thumbnailPreview: "",

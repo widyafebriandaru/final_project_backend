@@ -27,18 +27,24 @@ module.exports = {
 
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       review: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       rating: {
         type: Sequelize.INTEGER
       },
-      product_quote: {
+      product_quote_S: {
         type: Sequelize.INTEGER
       },
-      initial_price: {
+      product_quote_L: {
+        type: Sequelize.INTEGER
+      },
+      product_quote_XL: {
+        type: Sequelize.INTEGER
+      },
+      initialPrice: {
         type: Sequelize.INTEGER
       },
       category: {
@@ -49,10 +55,12 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         type: Sequelize.DATE
       }
     });

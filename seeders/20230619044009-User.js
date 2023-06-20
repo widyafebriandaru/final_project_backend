@@ -19,19 +19,16 @@ module.exports = {
        email: "febriandaru23@gmail.com",
        phone: "081532551051",
        password: "727272",
+       accountType: "admin"
     },
       {
-       fullName: 'Nana',
-       email: "nhazulishutin@gmail.com",
-       phone: "081540032228",
-       password: "727272",
+       fullName: 'NhaZul',
+       email: "febriandaru72@gmail.com",
+       phone: "081532551052",
+       password: "232323",
+       accountType: "customer"
     },
-      {
-       fullName: 'Widi',
-       email: "darulicek@gmail.com",
-       phone: "081234567891",
-       password: "727272",
-    }
+      
   ], {});
   },
 
